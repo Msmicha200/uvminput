@@ -1,0 +1,58 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.uvm--input-wrapper {
+	font-family: sans-serif;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	position: relative;
+	padding: 15px 0 0;
+}
+.uvm--label {
+	position: absolute;
+	top: 0;
+	color: #849EEF;
+	transition: 0.2s;
+	padding: 0 5px;
+}
+.uvm--input {
+	color: 	#849EEF;
+	width: 300px;
+	border: none;
+	border-bottom: 2px solid #849EEF;
+	padding: 7px 5px;
+	outline: none;
+	font-weight: 700;
+	transition: 0.2s;
+	font-size: 16px;
+}
+.uvm--input::placeholder {
+	color: transparent;
+}
+.uvm--input:placeholder-shown ~ .uvm--label {
+	top: 20px;
+	cursor: text;
+	font-size: 18px;
+}
+.uvm--input:not(:placeholder-shown) ~ .uvm--label {
+	font-size: 12px;
+}
+.uvm--input:focus ~ .uvm--label {
+	position: absolute;
+	top: 0;
+	transition: .2s;
+	font-size: 12px;
+}
+.uvm--input:required, .uvm--input:invalid {
+	box-shadow: none;
+}
